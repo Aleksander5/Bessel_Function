@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besselapplication.Controller">
+   <children>
+      <StackPane prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="drawButton" mnemonicParsing="false" onAction="#drawChart" prefHeight="75.0" prefWidth="125.0" text="RYSUJ" textOverrun="CLIP">
+               <font>
+                  <Font name="Droid Sans Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </StackPane>
+
+      <StackPane layoutY="100.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="higherOrderButton" mnemonicParsing="false" prefHeight="75.0" prefWidth="125.0" text="WYŻSZY RZĄD" onAction="#drawChartSequence">
+               <font>
+                  <Font name="Droid Sans Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </StackPane>
+
+      <StackPane layoutY="200.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearChart" prefHeight="75.0" prefWidth="125.0" text="WYCZYŚĆ">
+               <font>
+                  <Font name="Droid Sans Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </StackPane>
+
+      <StackPane layoutY="300.0" prefHeight="50.0" prefWidth="100.0">
+         <children>
+            <Label prefHeight="28.0" prefWidth="87.0" text="PODAJ RZĄD:" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+
+      <StackPane layoutX="100.0" layoutY="300.0" prefHeight="50.0" prefWidth="100.0">
+         <children>
+            <TextField fx:id="enterOrderTextField" />
+         </children>
+      </StackPane>
+      <StackPane fx:id="chartPane" layoutX="200.0" prefHeight="500.0" prefWidth="600.0" />
+
+      <StackPane layoutX="100.0" layoutY="350.0" prefHeight="50.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="actualOrderLabel" prefHeight="33.0" prefWidth="100.0" text="Aktualny rząd" />
+         </children>
+      </StackPane>
+
+      <StackPane layoutY="350.0" prefHeight="50.0" prefWidth="100.0">
+         <children>
+            <Label prefHeight="28.0" prefWidth="84.0" text="RZĄD:" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+
+      <StackPane layoutY="400.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="commentLabel" prefHeight="100.0" prefWidth="190.0" textFill="RED" textOverrun="CLIP">
+               <font>
+                  <Font name="Droid Sans Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </StackPane>
+
+   </children>
+</Pane>
