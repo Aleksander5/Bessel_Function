@@ -24,7 +24,7 @@ public class Controller {
         prepareAppWindow();
 
         try {
-            insertedOrder = Double.parseDouble(enterOrderTextField.getText());
+            insertedOrder = Integer.parseInt(enterOrderTextField.getText());
 
             if(insertedOrder < 0){
                 commentLabel.setText("Podana wartość musi być nieujemna");
@@ -38,7 +38,7 @@ public class Controller {
             }
         }
         catch (NumberFormatException ex) {
-            commentLabel.setText("Podana wartość nie jest liczbą");
+            commentLabel.setText("Podana wartość nie jest liczbą lub nie jest liczbą całkowitą");
         }
     }
 
